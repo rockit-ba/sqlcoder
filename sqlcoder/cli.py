@@ -32,7 +32,7 @@ def main():
 def serve_webserver():
     from sqlcoder.serve import app
     import uvicorn
-    uvicorn.run(app, host="localhost", port=1235)
+    uvicorn.run(app, host="10.0.4.12", port=1235)
 
 
 def serve_static():
@@ -51,7 +51,7 @@ def serve_static():
                 **kwargs
             )
 
-    webbrowser.open(f"http://localhost:{port}")
+    webbrowser.open(f"http://10.0.4.12:{port}")
     with socketserver.TCPServer(("", port), Handler) as httpd:
         print(f"Static folder is {directory}")
         httpd.extension_maps = {".html": "text/html", "": "text/html"}
