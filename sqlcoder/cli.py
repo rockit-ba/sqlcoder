@@ -40,7 +40,7 @@ def serve_static():
     import socketserver
     import webbrowser
 
-    port = 8002
+    port = 8008
     directory = os.path.join(sqlcoder.__path__[0], "static")
 
     class Handler(http.server.SimpleHTTPRequestHandler):
